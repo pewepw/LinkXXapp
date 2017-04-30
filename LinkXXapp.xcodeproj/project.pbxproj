@@ -23,6 +23,13 @@
 		4A56FC551EB43CAD0085C06F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A56FC531EB43CAD0085C06F /* Main.storyboard */; };
 		4A56FC571EB43CAD0085C06F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A56FC561EB43CAD0085C06F /* Assets.xcassets */; };
 		4A56FC5A1EB43CAD0085C06F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A56FC581EB43CAD0085C06F /* LaunchScreen.storyboard */; };
+		4A79BB951EB6426C000272B5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79BB941EB6426C000272B5 /* Group.swift */; };
+		4A79BB971EB64308000272B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79BB961EB64308000272B5 /* User.swift */; };
+		4AE9AD6B1EB6606F00EC57E0 /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9AD6A1EB6606F00EC57E0 /* GroupCollectionViewCell.swift */; };
+		4AE9AD6D1EB66BE700EC57E0 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9AD6C1EB66BE700EC57E0 /* Api.swift */; };
+		4AE9AD6F1EB66C4F00EC57E0 /* MyGroupApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9AD6E1EB66C4F00EC57E0 /* MyGroupApi.swift */; };
+		4AE9AD711EB66CDD00EC57E0 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9AD701EB66CDD00EC57E0 /* UserApi.swift */; };
+		4AE9AD731EB66D0300EC57E0 /* GroupApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9AD721EB66D0300EC57E0 /* GroupApi.swift */; };
 		F1DB32D5467E35BDCD6F948E /* Pods_LinkXXapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A2AEEE9BB76D84FA33B762 /* Pods_LinkXXapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +54,13 @@
 		4A56FC561EB43CAD0085C06F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A56FC591EB43CAD0085C06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A56FC5B1EB43CAD0085C06F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A79BB941EB6426C000272B5 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		4A79BB961EB64308000272B5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4AE9AD6A1EB6606F00EC57E0 /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		4AE9AD6C1EB66BE700EC57E0 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		4AE9AD6E1EB66C4F00EC57E0 /* MyGroupApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGroupApi.swift; sourceTree = "<group>"; };
+		4AE9AD701EB66CDD00EC57E0 /* UserApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
+		4AE9AD721EB66D0300EC57E0 /* GroupApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupApi.swift; sourceTree = "<group>"; };
 		B1A2AEEE9BB76D84FA33B762 /* Pods_LinkXXapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkXXapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +98,10 @@
 			isa = PBXGroup;
 			children = (
 				4A56FC4F1EB43CAD0085C06F /* AppDelegate.swift */,
+				4AE9AD6C1EB66BE700EC57E0 /* Api.swift */,
+				4AE9AD701EB66CDD00EC57E0 /* UserApi.swift */,
+				4AE9AD721EB66D0300EC57E0 /* GroupApi.swift */,
+				4AE9AD6E1EB66C4F00EC57E0 /* MyGroupApi.swift */,
 				4A56FC611EB43CCE0085C06F /* Modal */,
 				4A56FC621EB43CD50085C06F /* Views */,
 				4A56FC631EB43CD90085C06F /* Controllers */,
@@ -99,6 +117,8 @@
 		4A56FC611EB43CCE0085C06F /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				4A79BB961EB64308000272B5 /* User.swift */,
+				4A79BB941EB6426C000272B5 /* Group.swift */,
 			);
 			name = Modal;
 			sourceTree = "<group>";
@@ -107,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				4A549DDB1EB49ED300EE7EC9 /* AddressBookTableViewCell.swift */,
+				4AE9AD6A1EB6606F00EC57E0 /* GroupCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -271,16 +292,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A50A7F71EB5855300900400 /* SignInViewController.swift in Sources */,
+				4AE9AD6F1EB66C4F00EC57E0 /* MyGroupApi.swift in Sources */,
 				4A108E3D1EB4430500F3BBF5 /* NotificationsViewController.swift in Sources */,
 				4A108E391EB442F000F3BBF5 /* CalendarViewController.swift in Sources */,
+				4AE9AD6B1EB6606F00EC57E0 /* GroupCollectionViewCell.swift in Sources */,
 				4A549DD81EB49B8000EE7EC9 /* CreateGroupTwoViewController.swift in Sources */,
 				4A108E371EB442D400F3BBF5 /* GroupViewController.swift in Sources */,
 				4A549DDA1EB49B8F00EE7EC9 /* CreateGroupViewController.swift in Sources */,
+				4A79BB971EB64308000272B5 /* User.swift in Sources */,
+				4A79BB951EB6426C000272B5 /* Group.swift in Sources */,
 				4A50A7F81EB5855300900400 /* SignUpViewController.swift in Sources */,
+				4AE9AD731EB66D0300EC57E0 /* GroupApi.swift in Sources */,
 				4A56FC501EB43CAD0085C06F /* AppDelegate.swift in Sources */,
 				4A108E3F1EB4430E00F3BBF5 /* StatusViewController.swift in Sources */,
 				4A50A7F41EB5824400900400 /* CreateGroupThreeViewController.swift in Sources */,
 				4A108E3B1EB442F900F3BBF5 /* HomeViewController.swift in Sources */,
+				4AE9AD711EB66CDD00EC57E0 /* UserApi.swift in Sources */,
+				4AE9AD6D1EB66BE700EC57E0 /* Api.swift in Sources */,
 				4A549DDC1EB49ED300EE7EC9 /* AddressBookTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

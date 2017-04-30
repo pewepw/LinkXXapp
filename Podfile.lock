@@ -41,6 +41,9 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
   - SCLAlertView (0.7.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.1.2)
   - TwicketSegmentedControl (0.1.2)
 
@@ -51,6 +54,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - SCLAlertView (~> 0.7)
+  - SDWebImage (~> 4.0)
   - SVProgressHUD (~> 2.1)
   - TwicketSegmentedControl (~> 0.1)
 
@@ -66,9 +70,10 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
 
-PODFILE CHECKSUM: 90e1ca4cfb3f942203b662f71f79651888184eee
+PODFILE CHECKSUM: 2efc83757caaa708eacc6f2a7cc9f5a352c03d50
 
 COCOAPODS: 1.1.1

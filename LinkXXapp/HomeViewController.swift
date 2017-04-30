@@ -20,8 +20,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func followMeButton_TouchUpInside(_ sender: Any) {
         SCLAlertView().showTitle(
-            "Coming Soon",
-            subTitle: "Feature",
+            "Exicting Feature",
+            subTitle: "Coming Soon",
             duration: 0.0,
             completeText: "OK",
             style: .success,
@@ -31,8 +31,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func chatButton_TouchUpInside(_ sender: Any) {
         SCLAlertView().showTitle(
-            "Coming Soon",
-            subTitle: "Feature",
+            "Exicting Feature",
+            subTitle: "Coming Soon",
             duration: 0.0,
             completeText: "OK",
             style: .success,
@@ -42,8 +42,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func panicButton_TouchUpInside(_ sender: Any) {
         SCLAlertView().showTitle(
-            "Coming Soon",
-            subTitle: "Feature",
+            "Exicting Feature",
+            subTitle: "Coming Soon",
             duration: 0.0,
             completeText: "OK",
             style: .success,

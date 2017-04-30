@@ -15,7 +15,8 @@ class CreateGroupViewController: UIViewController {
     @IBOutlet weak var selectCategoryButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
-    var category = "friends"
+    var selectedCategory = "friends"
+    var selectedGroupName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +28,24 @@ class CreateGroupViewController: UIViewController {
     
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Create_SegueTwo" {
+            let createGroupTwoVC = segue.destination as? CreateGroupTwoViewController
+            createGroupTwoVC?.selectedCategory = self.selectedCategory
+            createGroupTwoVC?.selectedGroupName = self.selectedGroupName
+        }
+    }
+    
     @IBAction func selectCategoryButton_TouchUpInside(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Group Category", message: "Select a group category", preferredStyle: .actionSheet)
         let family = UIAlertAction(title: "Family", style: .default) { (action) in
             self.selectCategoryButton.setTitle("Family", for: .normal)
-            self.category = action.title!
+            self.selectedCategory = action.title!
             
         }
         let friends = UIAlertAction(title: "Friends", style: .default) { (action) in
             self.selectCategoryButton.setTitle("Friends", for: .normal)
-            self.category = action.title!
+            self.selectedCategory = action.title!
         }
 
         actionSheet.addAction(family)
@@ -45,9 +54,7 @@ class CreateGroupViewController: UIViewController {
     }
     
     @IBAction func nextButton_TouchUpInside(_ sender: Any) {
-       // let appearance = SCLAlertView.SCLAppearance(showCircularIcon: false)
-       // let alertView = SCLAlertView(appearance: appearance)
-       // alertView.showInfo("Unable to create group", subTitle: "Please enter group name")
+       
         if groupNameTextField.text == "" {
             SCLAlertView().showTitle(
                 "Unable to create group",
@@ -58,6 +65,7 @@ class CreateGroupViewController: UIViewController {
                 colorStyle: 0xF26C57,
                 colorTextButton: 0xFFFFFF)
         } else {
+            selectedGroupName = self.groupNameTextField.text
             performSegue(withIdentifier: "Create_SegueTwo", sender: nil)
         }
         

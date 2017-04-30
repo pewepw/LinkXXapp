@@ -15,6 +15,6 @@ pod 'TwicketSegmentedControl', '~> 0.1'
 pod 'SVProgressHUD', '~> 2.1'
 pod 'SCLAlertView', '~> 0.7'
 pod 'CVCalendar', '~> 1.5.0'
-
+pod 'SDWebImage', '~> 4.0'
 
 end

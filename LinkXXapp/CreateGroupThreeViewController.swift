@@ -14,6 +14,10 @@ import SVProgressHUD
 class CreateGroupThreeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchByPhoneBookButton: UIButton!
+    @IBOutlet weak var searchByExistingUserButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
+
     
     var contacts = [String]()
     
@@ -22,8 +26,18 @@ class CreateGroupThreeViewController: UIViewController {
 
         tableView.dataSource = self
         
+        searchByPhoneBookButton.layer.cornerRadius = 5
+        searchByPhoneBookButton.clipsToBounds = true
+        searchByPhoneBookButton.layer.borderWidth = 1
+        searchByPhoneBookButton.layer.borderColor = UIColor(red: 244/255, green: 107/255, blue: 82/255, alpha: 1).cgColor
+        
+        searchByExistingUserButton.layer.cornerRadius = 5
+        searchByExistingUserButton.clipsToBounds = true
+        searchByExistingUserButton.layer.borderWidth = 1
+        searchByExistingUserButton.layer.borderColor = UIColor(red: 244/255, green: 107/255, blue: 82/255, alpha: 1).cgColor
         
     }
+    
     @IBAction func selectContactsButton_TouchUpInside(_ sender: Any) {
         let entityType = CNEntityType.contacts
         let authStatus = CNContactStore.authorizationStatus(for: entityType )
@@ -51,6 +65,11 @@ class CreateGroupThreeViewController: UIViewController {
     
     @IBAction func backButton_TouchUpInside(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func doneButton_TouchUpInside(_ sender: Any) {
+        performSegue(withIdentifier: "Done_Segue", sender: nil)
+        
     }
     
 }
