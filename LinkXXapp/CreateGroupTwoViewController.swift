@@ -24,7 +24,7 @@ class CreateGroupTwoViewController: UIViewController {
     }
     
     @IBAction func setLaterButton_TouchUpInside(_ sender: Any) {
-        performSegue(withIdentifier: "Create_SegueTwo", sender: nil)
+        performSegue(withIdentifier: "Create_SegueThree", sender: nil)
     }
     
     @IBAction func backButton_TouchUpInside(_ sender: Any) {

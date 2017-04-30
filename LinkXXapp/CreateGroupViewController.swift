@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class CreateGroupViewController: UIViewController {
     
@@ -45,9 +46,23 @@ class CreateGroupViewController: UIViewController {
     }
     
     @IBAction func nextButton_TouchUpInside(_ sender: Any) {
-       
+       // let appearance = SCLAlertView.SCLAppearance(showCircularIcon: false)
+       // let alertView = SCLAlertView(appearance: appearance)
+       // alertView.showInfo("Unable to create group", subTitle: "Please enter group name")
+        if groupNameTextField.text == "" {
+            SCLAlertView().showTitle(
+                "Unable to create group",
+                subTitle: "Please enter group name",
+                duration: 0.0,
+                completeText: "OK",
+                style: .success,
+                colorStyle: 0xF26C57,
+                colorTextButton: 0xFFFFFF)
+        } else {
+            performSegue(withIdentifier: "Create_SegueTwo", sender: nil)
+        }
         
-        //performSegue(withIdentifier: "Create_SegueTwo", sender: nil)
+        
     }
     
     @IBAction func backButton_TouchUpInside(_ sender: Any) {

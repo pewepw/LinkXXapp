@@ -40,6 +40,7 @@ class CreateGroupThreeViewController: UIViewController {
         } else if authStatus == CNAuthorizationStatus.authorized {
             self.openContacts()
         }
+
     }
     
     func openContacts() {
