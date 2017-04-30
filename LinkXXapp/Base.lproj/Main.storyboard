@@ -415,10 +415,10 @@
             </objects>
             <point key="canvasLocation" x="-1402" y="2430"/>
         </scene>
-        <!--Calender View Controller-->
+        <!--Animator Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CalenderViewController" customModule="LinkXXapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalendarViewController" customModule="LinkXXapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -426,15 +426,86 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3FX-Nw-cZa" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4pi-VB-YsC"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="menuViewDelegate" destination="BYZ-38-t0r" id="hk7-le-SPl"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfp-mT-jH0" customClass="CVCalendarView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="104" width="375" height="464"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="animatorDelegate" destination="BYZ-38-t0r" id="uxf-SH-z9c"/>
+                                    <outlet property="calendarAppearanceDelegate" destination="BYZ-38-t0r" id="hBc-wf-5UX"/>
+                                    <outlet property="calendarDelegate" destination="BYZ-38-t0r" id="Kpk-zT-P1j"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90k-ty-lOH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1e-7M-h0G">
+                                        <rect key="frame" x="160.5" y="32" width="54.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qt-8l-VRx">
+                                        <rect key="frame" x="330" y="29.5" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="0RZ-y8-cf9"/>
+                                            <constraint firstAttribute="height" constant="30" id="HYD-9B-dVg"/>
+                                        </constraints>
+                                        <state key="normal" image="hamburger"/>
+                                        <connections>
+                                            <action selector="switchViewButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fZI-Hb-Ok3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.42352941179999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="a1e-7M-h0G" firstAttribute="centerX" secondItem="90k-ty-lOH" secondAttribute="centerX" id="Ngp-pJ-8Jl"/>
+                                    <constraint firstItem="a1e-7M-h0G" firstAttribute="top" secondItem="90k-ty-lOH" secondAttribute="top" constant="32" id="W9p-RC-oMn"/>
+                                    <constraint firstAttribute="height" constant="64" id="fss-nv-nSw"/>
+                                    <constraint firstAttribute="trailing" secondItem="7qt-8l-VRx" secondAttribute="trailing" constant="15" id="hp7-ef-mC5"/>
+                                    <constraint firstItem="7qt-8l-VRx" firstAttribute="centerY" secondItem="a1e-7M-h0G" secondAttribute="centerY" id="n5h-Y2-a8i"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3FX-Nw-cZa" firstAttribute="top" secondItem="90k-ty-lOH" secondAttribute="bottom" id="8cK-T8-1hx"/>
+                            <constraint firstItem="3FX-Nw-cZa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ILh-W5-c70"/>
+                            <constraint firstAttribute="trailing" secondItem="tfp-mT-jH0" secondAttribute="trailing" id="LFM-nZ-5d1"/>
+                            <constraint firstItem="90k-ty-lOH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="N0a-fl-uaq"/>
+                            <constraint firstItem="90k-ty-lOH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WXf-KA-gSE"/>
+                            <constraint firstAttribute="trailing" secondItem="3FX-Nw-cZa" secondAttribute="trailing" id="agH-ZT-j6H"/>
+                            <constraint firstAttribute="trailing" secondItem="90k-ty-lOH" secondAttribute="trailing" id="apg-ST-bdj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tfp-mT-jH0" secondAttribute="bottom" constant="50" id="uHP-3z-QQ4"/>
+                            <constraint firstItem="tfp-mT-jH0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="v9Y-Kj-HnD"/>
+                            <constraint firstItem="tfp-mT-jH0" firstAttribute="top" secondItem="3FX-Nw-cZa" secondAttribute="bottom" id="zL8-YE-Dnm"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="calendar-29x29" id="Bni-8b-52w">
+                    <tabBarItem key="tabBarItem" title="" image="calendar-29x29" id="bfn-7Y-fki">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="ZYn-AW-Udx">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="calendarView" destination="tfp-mT-jH0" id="7k8-RV-yQC"/>
+                        <outlet property="menuView" destination="3FX-Nw-cZa" id="rsT-ce-9wg"/>
+                        <outlet property="monthLabel" destination="a1e-7M-h0G" id="JKr-BD-6pe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-636" y="922"/>
+            <point key="canvasLocation" x="-439.19999999999999" y="936.88155922038993"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="e4h-4e-Bca">
@@ -455,7 +526,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FC-EM-J56" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="923"/>
+            <point key="canvasLocation" x="1056.8" y="922.48875562218893"/>
         </scene>
         <!--Notifications View Controller-->
         <scene sceneID="vbA-jn-vFQ">
@@ -476,7 +547,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5F-P1-BLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="922"/>
+            <point key="canvasLocation" x="1816.8" y="921.58920539730138"/>
         </scene>
         <!--Status View Controller-->
         <scene sceneID="G2g-iZ-D9i">
@@ -513,7 +584,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEm-LP-UkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644" y="922"/>
+            <point key="canvasLocation" x="2583.1999999999998" y="921.58920539730138"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XLr-wr-Lyq">
@@ -527,10 +598,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="iQa-Pn-XIR" kind="relationship" relationship="viewControllers" id="Uuk-4E-cEW"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="m42-CI-FRe"/>
-                        <segue destination="yD7-cg-gaE" kind="relationship" relationship="viewControllers" id="jSm-TW-85v"/>
-                        <segue destination="5j1-Mq-A2p" kind="relationship" relationship="viewControllers" id="yBP-uO-tFV"/>
-                        <segue destination="Rmh-PA-hR4" kind="relationship" relationship="viewControllers" id="MM1-c5-FEL"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eaj-G6-wzw"/>
+                        <segue destination="yD7-cg-gaE" kind="relationship" relationship="viewControllers" id="u04-qC-bUK"/>
+                        <segue destination="5j1-Mq-A2p" kind="relationship" relationship="viewControllers" id="8QY-u9-S7i"/>
+                        <segue destination="Rmh-PA-hR4" kind="relationship" relationship="viewControllers" id="lEB-My-CPF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJk-If-NMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1009,6 +1080,7 @@
         <image name="calendar-29x29" width="29" height="29"/>
         <image name="city" width="1920" height="1200"/>
         <image name="group-29x29" width="29" height="29"/>
+        <image name="hamburger" width="64" height="64"/>
         <image name="home-29x29" width="29" height="29"/>
         <image name="notifications-29x29" width="29" height="29"/>
         <image name="plus" width="128" height="128"/>

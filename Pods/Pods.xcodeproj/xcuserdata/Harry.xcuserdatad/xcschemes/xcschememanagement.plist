@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CVCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>048A5E0351FBBEA85FC8737C066C7861</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>17DA929D1FAD5129CA720CD4B2966913</key>
+		<key>26A464F11A04AC76CFCB78C241223BBE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C2A739D1513EF066A3977F4318155D6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8CFCD9FCE37D0CAAD9922BFCE2340F30</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A726B14AB7C3D4C5A89D9800151190A4</key>
+		<key>6857E7B6E3F25CAA4328A4691E2685F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB5BBAD342E37AAC2EEB4F27E85942BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6204A345A37C6CEE4D4E8E67F6A48C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

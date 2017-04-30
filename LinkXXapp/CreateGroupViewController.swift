@@ -27,7 +27,6 @@ class CreateGroupViewController: UIViewController {
     
     }
     
-    
     @IBAction func selectCategoryButton_TouchUpInside(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Group Category", message: "Select a group category", preferredStyle: .actionSheet)
         let family = UIAlertAction(title: "Family", style: .default) { (action) in

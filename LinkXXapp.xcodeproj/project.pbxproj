@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A108E371EB442D400F3BBF5 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A108E361EB442D400F3BBF5 /* GroupViewController.swift */; };
-		4A108E391EB442F000F3BBF5 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A108E381EB442F000F3BBF5 /* CalenderViewController.swift */; };
+		4A108E391EB442F000F3BBF5 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A108E381EB442F000F3BBF5 /* CalendarViewController.swift */; };
 		4A108E3B1EB442F900F3BBF5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A108E3A1EB442F900F3BBF5 /* HomeViewController.swift */; };
 		4A108E3D1EB4430500F3BBF5 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A108E3C1EB4430500F3BBF5 /* NotificationsViewController.swift */; };
 		4A108E3F1EB4430E00F3BBF5 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A108E3E1EB4430E00F3BBF5 /* StatusViewController.swift */; };
@@ -30,7 +30,7 @@
 		26B7CC2A2AEA2FEE7F47CB3D /* Pods-LinkXXapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkXXapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LinkXXapp/Pods-LinkXXapp.debug.xcconfig"; sourceTree = "<group>"; };
 		36F57A48AFB6989E8C27534C /* Pods-LinkXXapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkXXapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-LinkXXapp/Pods-LinkXXapp.release.xcconfig"; sourceTree = "<group>"; };
 		4A108E361EB442D400F3BBF5 /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
-		4A108E381EB442F000F3BBF5 /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
+		4A108E381EB442F000F3BBF5 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		4A108E3A1EB442F900F3BBF5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4A108E3C1EB4430500F3BBF5 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		4A108E3E1EB4430E00F3BBF5 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				4A549DD91EB49B8F00EE7EC9 /* CreateGroupViewController.swift */,
 				4A549DD71EB49B8000EE7EC9 /* CreateGroupTwoViewController.swift */,
 				4A50A7F31EB5824400900400 /* CreateGroupThreeViewController.swift */,
-				4A108E381EB442F000F3BBF5 /* CalenderViewController.swift */,
+				4A108E381EB442F000F3BBF5 /* CalendarViewController.swift */,
 				4A108E3A1EB442F900F3BBF5 /* HomeViewController.swift */,
 				4A108E3C1EB4430500F3BBF5 /* NotificationsViewController.swift */,
 				4A108E3E1EB4430E00F3BBF5 /* StatusViewController.swift */,
@@ -272,7 +272,7 @@
 			files = (
 				4A50A7F71EB5855300900400 /* SignInViewController.swift in Sources */,
 				4A108E3D1EB4430500F3BBF5 /* NotificationsViewController.swift in Sources */,
-				4A108E391EB442F000F3BBF5 /* CalenderViewController.swift in Sources */,
+				4A108E391EB442F000F3BBF5 /* CalendarViewController.swift in Sources */,
 				4A549DD81EB49B8000EE7EC9 /* CreateGroupTwoViewController.swift in Sources */,
 				4A108E371EB442D400F3BBF5 /* GroupViewController.swift in Sources */,
 				4A549DDA1EB49B8F00EE7EC9 /* CreateGroupViewController.swift in Sources */,
