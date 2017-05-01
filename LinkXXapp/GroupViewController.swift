@@ -15,11 +15,11 @@ import SVProgressHUD
 class GroupViewController: UIViewController {
     
     @IBOutlet weak var segmentedControl: TwicketSegmentedControl!
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var groups: [Group] = []
     var users: [User] = []
+    var groupId: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +39,8 @@ class GroupViewController: UIViewController {
         if let currentUser = FIRAuth.auth()?.currentUser {
             FIRDatabase.database().reference().child("myGroups").child(currentUser.uid).observe(.childAdded, with: { (snapshot) in
                 SVProgressHUD.show()
-                let groupId = snapshot.key
-                Api.Group.observeGroup(withId: groupId, completion: { (group) in
+                self.groupId = snapshot.key
+                Api.Group.observeGroup(withId: self.groupId!, completion: { (group) in
                     self.fetchUser(uid: group.uid!, completed: {
                         self.groups.append(group)
                         SVProgressHUD.dismiss()
@@ -60,7 +60,6 @@ class GroupViewController: UIViewController {
             }
         })
     }
-
     
     @IBAction func addButton_TouchUpInside(_ sender: Any) {
         performSegue(withIdentifier: "Create_Segue", sender: nil)

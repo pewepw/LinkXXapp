@@ -8,6 +8,9 @@
 
 import UIKit
 import SDWebImage
+//protocol GroupCollectionViewCellDelegate {
+//    func pass(groupId: String)
+//}
 
 class GroupCollectionViewCell: UICollectionViewCell {
     
@@ -15,6 +18,8 @@ class GroupCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var groupLabel: UILabel!
     
     var groupVC: GroupViewController?
+
+//    var delegate: GroupCollectionViewCellDelegate?
     
     var group: Group? {
         didSet {
@@ -37,6 +42,9 @@ class GroupCollectionViewCell: UICollectionViewCell {
         
         groupLabel.text = ""
         
+        
+        
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.groupImageView_TouchUpInside))
         groupImageView.addGestureRecognizer(tapGesture)
         groupImageView.isUserInteractionEnabled = true
@@ -53,10 +61,10 @@ class GroupCollectionViewCell: UICollectionViewCell {
  
 
     func groupImageView_TouchUpInside() {
-        //if let id = group?.id {
+//        if let id = group?.id {
+//            delegate?.pass(groupId: id)
+//        }
         groupVC?.tabBarController?.selectedIndex = 2
-            //self.groupVC?.performSegue(withIdentifier: "Group_HomeSegue", sender: id)
-        //}
     }
 
     
