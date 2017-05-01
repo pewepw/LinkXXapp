@@ -70,7 +70,7 @@ class GroupViewController: UIViewController {
 
 extension GroupViewController: TwicketSegmentedControlDelegate {
     func didSelect(_ segmentIndex: Int) {
-        
+        print(segmentIndex)
     }
     
 }

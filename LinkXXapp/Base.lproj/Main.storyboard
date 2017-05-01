@@ -947,6 +947,7 @@
                         <outlet property="searchByExistingUserButton" destination="xPd-0L-Bq9" id="ET4-nF-7IY"/>
                         <outlet property="searchByPhoneBookButton" destination="OqK-48-Fc2" id="WmX-ce-CE6"/>
                         <outlet property="tableView" destination="LHS-8Z-alU" id="Lfc-gN-e04"/>
+                        <segue destination="iQa-Pn-XIR" kind="presentation" identifier="Done_Segue" id="rjF-vi-sCW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5t2-Ls-Xzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1277,6 +1278,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="49h-Kn-6et"/>
+        <segue reference="rjF-vi-sCW"/>
         <segue reference="uP0-QN-ynM"/>
     </inferredMetricsTieBreakers>
 </document>
