@@ -100,7 +100,7 @@ class CreateGroupTwoViewController: UIViewController {
             if error != nil {
                 SVProgressHUD.showError(withStatus: error?.localizedDescription)
             } else {
-                let myGroupsRef = Api.MyGroup.REF_MYGROUP.child(currentUserId).child(postId)
+                let myGroupsRef = Api.MyGroup.REF_MYGROUP.child(self.selectedCategory!.lowercased()).child(currentUserId).child(postId)
                 myGroupsRef.setValue(true, withCompletionBlock: { (error, snapshot) in
                     if error != nil {
                         SVProgressHUD.showError(withStatus: error?.localizedDescription)

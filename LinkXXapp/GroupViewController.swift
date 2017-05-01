@@ -32,12 +32,30 @@ class GroupViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
        
-        loadPosts()
+        loadFriends()
+        
     }
     
-    func loadPosts() {
+    func loadFamily() {
         if let currentUser = FIRAuth.auth()?.currentUser {
-            FIRDatabase.database().reference().child("myGroups").child(currentUser.uid).observe(.childAdded, with: { (snapshot) in
+            FIRDatabase.database().reference().child("myGroups").child("family").child(currentUser.uid).observe(.childAdded, with: { (snapshot) in
+                SVProgressHUD.show()
+                self.groupId = snapshot.key
+                Api.Group.observeGroup(withId: self.groupId!, completion: { (group) in
+                    self.fetchUser(uid: group.uid!, completed: {
+                        self.groups.append(group)
+                        SVProgressHUD.dismiss()
+                        self.collectionView.reloadData()
+                    })
+                })
+            })
+        }
+    }
+
+    
+    func loadFriends() {
+        if let currentUser = FIRAuth.auth()?.currentUser {
+            FIRDatabase.database().reference().child("myGroups").child("friends").child(currentUser.uid).observe(.childAdded, with: { (snapshot) in
                 SVProgressHUD.show()
                 self.groupId = snapshot.key
                 Api.Group.observeGroup(withId: self.groupId!, completion: { (group) in
@@ -70,7 +88,17 @@ class GroupViewController: UIViewController {
 
 extension GroupViewController: TwicketSegmentedControlDelegate {
     func didSelect(_ segmentIndex: Int) {
-        print(segmentIndex)
+        if segmentIndex == 0 {
+            groups.removeAll()
+            loadFriends()
+        } else if segmentIndex == 1 {
+            groups.removeAll()
+            loadFamily()
+        } else {
+            groups.removeAll()
+            collectionView.reloadData()
+        }
+        
     }
     
 }
