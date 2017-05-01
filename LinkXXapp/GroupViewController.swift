@@ -94,9 +94,11 @@ extension GroupViewController: TwicketSegmentedControlDelegate {
     func didSelect(_ segmentIndex: Int) {
         if segmentIndex == 0 {
             groups.removeAll()
+            collectionView.reloadData()
             loadFriends()
         } else if segmentIndex == 1 {
             groups.removeAll()
+            collectionView.reloadData()
             loadFamily()
         } else {
             groups.removeAll()
