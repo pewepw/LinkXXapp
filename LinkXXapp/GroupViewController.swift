@@ -79,6 +79,10 @@ class GroupViewController: UIViewController {
         })
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     @IBAction func addButton_TouchUpInside(_ sender: Any) {
         performSegue(withIdentifier: "Create_Segue", sender: nil)
     }
@@ -98,7 +102,6 @@ extension GroupViewController: TwicketSegmentedControlDelegate {
             groups.removeAll()
             collectionView.reloadData()
         }
-        
     }
     
 }

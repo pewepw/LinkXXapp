@@ -68,7 +68,9 @@ class CreateGroupThreeViewController: UIViewController {
     }
     
     @IBAction func doneButton_TouchUpInside(_ sender: Any) {
-        performSegue(withIdentifier: "Done_Segue", sender: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let groupVC = storyboard.instantiateViewController(withIdentifier: "tabBarController")
+        present(groupVC, animated: true, completion: nil)
         
     }
     
