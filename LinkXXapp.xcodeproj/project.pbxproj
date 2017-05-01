@@ -434,6 +434,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 26B7CC2A2AEA2FEE7F47CB3D /* Pods-LinkXXapp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 46SPJZ9KQP;
 				INFOPLIST_FILE = LinkXXapp/Info.plist;
@@ -448,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 36F57A48AFB6989E8C27534C /* Pods-LinkXXapp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 46SPJZ9KQP;
 				INFOPLIST_FILE = LinkXXapp/Info.plist;

@@ -14,6 +14,8 @@ class GroupCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var groupImageView: UIImageView!
     @IBOutlet weak var groupLabel: UILabel!
     
+    var groupVC: GroupViewController?
+    
     var group: Group? {
         didSet {
             updateView()
@@ -32,7 +34,12 @@ class GroupCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         groupLabel.text = ""
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.groupImageView_TouchUpInside))
+        groupImageView.addGestureRecognizer(tapGesture)
+        groupImageView.isUserInteractionEnabled = true
         
     }
     
@@ -42,6 +49,15 @@ class GroupCollectionViewCell: UICollectionViewCell {
         groupImageView.image = UIImage(named: "ava")
 
     }
+    
+ 
 
+    func groupImageView_TouchUpInside() {
+        //if let id = group?.id {
+        groupVC?.tabBarController?.selectedIndex = 2
+            //self.groupVC?.performSegue(withIdentifier: "Group_HomeSegue", sender: id)
+        //}
+    }
 
+    
 }

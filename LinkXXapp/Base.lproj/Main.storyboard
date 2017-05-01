@@ -42,7 +42,7 @@
                                     <size key="itemSize" width="200" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GroupCell" id="qqT-hN-Weo" customClass="GroupCollectionViewCell" customModule="LinkXXapp" customModuleProvider="target">
@@ -129,9 +129,10 @@
                             <constraint firstItem="2ME-o4-4vF" firstAttribute="top" secondItem="11j-w7-TKu" secondAttribute="bottom" constant="15" id="z8r-pn-olY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="group-29x29" id="PpC-UY-VQZ">
+                    <tabBarItem key="tabBarItem" title="" image="group-29x29" id="xSD-Sf-Ge9">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="Jqb-61-wet"/>
                     <connections>
                         <outlet property="collectionView" destination="bvs-qA-DlJ" id="nz8-cf-5yv"/>
                         <outlet property="segmentedControl" destination="2ME-o4-4vF" id="ERn-h4-wso"/>
@@ -140,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7oD-y3-nza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1636" y="921.58920539730138"/>
+            <point key="canvasLocation" x="-1636" y="1693"/>
         </scene>
         <!--Create Group View Controller-->
         <scene sceneID="6zV-CB-6gG">
@@ -302,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uOL-fa-KTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1636" y="1693"/>
+            <point key="canvasLocation" x="-1636" y="2427"/>
         </scene>
         <!--Create Group Two View Controller-->
         <scene sceneID="Cna-1c-dbr">
@@ -469,7 +470,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1H-1G-K9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-778" y="1693"/>
+            <point key="canvasLocation" x="-1636" y="3175"/>
         </scene>
         <!--Animator Delegate-->
         <scene sceneID="tne-QT-ifu">
@@ -547,7 +548,7 @@
                             <constraint firstItem="tfp-mT-jH0" firstAttribute="top" secondItem="3FX-Nw-cZa" secondAttribute="bottom" id="zL8-YE-Dnm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="calendar-29x29" id="bfn-7Y-fki">
+                    <tabBarItem key="tabBarItem" title="" image="calendar-29x29" id="aff-iH-fuM">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="ZYn-AW-Udx">
@@ -561,7 +562,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-777" y="922"/>
+            <point key="canvasLocation" x="-746" y="1693"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="e4h-4e-Bca">
@@ -602,13 +603,35 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="home-29x29" id="Cdh-Jk-Cit">
+                    <tabBarItem key="tabBarItem" title="" image="home-29x29" id="Q2k-zx-Y0b">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="gkF-c1-scK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FC-EM-J56" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="922"/>
+            <point key="canvasLocation" x="198" y="1693"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sMd-ra-xj0">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBarController" id="kcc-cv-xwL" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="TsY-DJ-15f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iQa-Pn-XIR" kind="relationship" relationship="viewControllers" id="eV2-gV-unH"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="c4S-PB-VvP"/>
+                        <segue destination="yD7-cg-gaE" kind="relationship" relationship="viewControllers" id="fse-IR-wpf"/>
+                        <segue destination="5j1-Mq-A2p" kind="relationship" relationship="viewControllers" id="CAm-tt-Bzm"/>
+                        <segue destination="Rmh-PA-hR4" kind="relationship" relationship="viewControllers" id="yaO-Fr-GDd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LC1-6f-zX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198" y="142"/>
         </scene>
         <!--Notifications View Controller-->
         <scene sceneID="vbA-jn-vFQ">
@@ -623,13 +646,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="notifications-29x29" id="TYr-dt-qpd">
+                    <tabBarItem key="tabBarItem" title="" image="notifications-29x29" id="qwo-uw-mP4">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="a2q-75-2z7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5F-P1-BLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033" y="922"/>
+            <point key="canvasLocation" x="1033" y="1693"/>
         </scene>
         <!--Status View Controller-->
         <scene sceneID="G2g-iZ-D9i">
@@ -660,35 +684,14 @@
                             <constraint firstItem="ywZ-tE-rGY" firstAttribute="centerX" secondItem="qeP-3E-tH2" secondAttribute="centerX" id="cDr-BA-EmW"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="status-29x29" id="MMR-Pc-Q3z">
+                    <tabBarItem key="tabBarItem" title="" image="status-29x29" id="KUH-9B-ENS">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="OoX-X4-CHy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEm-LP-UkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1924" y="922"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="XLr-wr-Lyq">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MSz-A8-zBO" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="igd-FN-edV">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="iQa-Pn-XIR" kind="relationship" relationship="viewControllers" id="Uuk-4E-cEW"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eaj-G6-wzw"/>
-                        <segue destination="yD7-cg-gaE" kind="relationship" relationship="viewControllers" id="u04-qC-bUK"/>
-                        <segue destination="5j1-Mq-A2p" kind="relationship" relationship="viewControllers" id="8QY-u9-S7i"/>
-                        <segue destination="Rmh-PA-hR4" kind="relationship" relationship="viewControllers" id="lEB-My-CPF"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dJk-If-NMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="1982" y="1693"/>
         </scene>
         <!--Create Group Three View Controller-->
         <scene sceneID="kP3-y7-pOn">
@@ -893,12 +896,11 @@
                         <outlet property="searchByExistingUserButton" destination="xPd-0L-Bq9" id="ET4-nF-7IY"/>
                         <outlet property="searchByPhoneBookButton" destination="OqK-48-Fc2" id="WmX-ce-CE6"/>
                         <outlet property="tableView" destination="LHS-8Z-alU" id="Lfc-gN-e04"/>
-                        <segue destination="MSz-A8-zBO" kind="presentation" identifier="Done_Segue" id="t7Z-cS-yNS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5t2-Ls-Xzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="1693"/>
+            <point key="canvasLocation" x="-1636" y="3930"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="Yd3-ex-WoP">
@@ -1035,7 +1037,7 @@
                         <outlet property="passwordTextField" destination="z5U-Mp-Eaa" id="nHH-XA-S53"/>
                         <outlet property="signUpButton" destination="U07-ej-rlV" id="PrI-AL-yyC"/>
                         <segue destination="Yfb-lA-2uQ" kind="presentation" identifier="SignUp_Segue" id="bwh-lt-DDL"/>
-                        <segue destination="MSz-A8-zBO" kind="presentation" identifier="Login_Segue" id="DKp-wN-DSi"/>
+                        <segue destination="kcc-cv-xwL" kind="presentation" identifier="Login_Segue" id="uP0-QN-ynM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGU-v5-Vy4" sceneMemberID="firstResponder"/>
@@ -1196,7 +1198,7 @@
                         <outlet property="profileImgView" destination="oDR-Ec-Idw" id="P9V-t1-E1Z"/>
                         <outlet property="signUpButton" destination="OBm-yW-YAf" id="JLu-hE-4rS"/>
                         <outlet property="usernameTextField" destination="rko-EO-t5O" id="T7x-mb-nsf"/>
-                        <segue destination="MSz-A8-zBO" kind="presentation" identifier="Login_Segue" id="zEO-eh-rNy"/>
+                        <segue destination="kcc-cv-xwL" kind="presentation" identifier="Login_Segue" id="Nir-1z-A3C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HyO-tJ-hjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1223,6 +1225,6 @@
         <image name="status-29x29" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="t7Z-cS-yNS"/>
+        <segue reference="Nir-1z-A3C"/>
     </inferredMetricsTieBreakers>
 </document>

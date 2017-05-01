@@ -64,6 +64,7 @@ class SignUpViewController: UIViewController {
     @IBAction func signUpButton_TouchUpInside(_ sender: Any) {
         
         view.endEditing(true)
+        SVProgressHUD.show()
         
         if let profileImg = self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.1) {
             FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
@@ -78,6 +79,7 @@ class SignUpViewController: UIViewController {
                             let profileImageUrl = metadata?.downloadURL()?.absoluteString
                             
                             FIRDatabase.database().reference().child("users").child(uid!).setValue(["username": self.usernameTextField.text, "username_lowercase": self.usernameTextField.text?.lowercased(), "email": self.emailTextField.text, "profileImageUrl": profileImageUrl])
+                            SVProgressHUD.showSuccess(withStatus: "Account Registered")
                             self.performSegue(withIdentifier: "Login_Segue", sender: nil)
                         }
                     })

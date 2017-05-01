@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 import TwicketSegmentedControl
+import SVProgressHUD
 
 class GroupViewController: UIViewController {
     
@@ -37,10 +38,12 @@ class GroupViewController: UIViewController {
     func loadPosts() {
         if let currentUser = FIRAuth.auth()?.currentUser {
             FIRDatabase.database().reference().child("myGroups").child(currentUser.uid).observe(.childAdded, with: { (snapshot) in
+                SVProgressHUD.show()
                 let groupId = snapshot.key
                 Api.Group.observeGroup(withId: groupId, completion: { (group) in
                     self.fetchUser(uid: group.uid!, completed: {
                         self.groups.append(group)
+                        SVProgressHUD.dismiss()
                         self.collectionView.reloadData()
                     })
                 })
@@ -83,6 +86,7 @@ extension GroupViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupCell", for: indexPath) as! GroupCollectionViewCell
         let group = groups[indexPath.row]
         cell.group = group
+        cell.groupVC = self
         
         return cell
     }
@@ -92,7 +96,7 @@ extension GroupViewController: UICollectionViewDataSource {
 
 extension GroupViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 200)
+        return CGSize(width: 250, height: 250)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
